@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Indie+Flower&family=Manrope:wght@800&family=Pacifico&family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+
+:root {
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --light-blue: hsl(228, 45%, 44%);
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    height: 100vh;
+    background-color: var(--dark-blue);
+    font-size: 28px; 
+    font-family: Manrope, serif; 
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container {
+    width: 600px;
+    height: 400px;
+    background-color:var(--dark-grayish-blue);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+    padding: 1em;
+    margin-top: 25vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.advice-number{
+    text-align: center;
+    color: var(--neon-green);
+    transition: all 0.2s ease-in-out;
+}
+
+.advice-container {
+    text-align: center;
+    display: flex;
+    font-weight: bold;
+    color: var(--light-cyan);
+    transition: all 0.2s ease-in-out;
+}
+
+.pattern-divider {
+    align-self: center;
+    height: 16px;
+    width: 444px;
+    background: url(images/pattern-divider-desktop.svg);
+}
+
+.button-container {
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--neon-green);
+    margin-top: 455px;
+}
+
+button img {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 2px;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 35px var(--neon-green)
+    
+}
+
+.dice:active {
+    transform: rotateZ(360deg);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 35px var(--neon-green)
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--light-cyan); 
+    margin-top: 25em;   
+    letter-spacing: 1px;
+}
+.attribution a { 
+    color: var(--light-blue); 
+}
+
+@media screen and (max-width:700px){
+    .card-container{
+        width: 330px;
+        height: 40vh;
+    }
+    .pattern-divider{
+        height: 16px;
+        width: 295px;
+        background: url(images/pattern-divider-mobile.svg);
+    }
+    .attribution{
+        margin-top: 18em;
+    }
+    .dice{
+        margin-top: 44vh;
+    }
+
+}
